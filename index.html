@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" href="img/6.png" type="image/icon">
+    <link rel="stylesheet" href="style.css">
+    <title>For You🎆</title>
+</head>
+<body>
+
+    <canvas id="canvas"></canvas>
+
+        <h1 class="titulo" id="titulo"><span class="text2" style="--i:1;">¡</span><span class="text2" style="--i:2;">H</span><span class="text2" style="--i:3;">a</span><span class="text2" style="--i:4;">p</span><span class="text2" style="--i:5;">p</span><span class="text2" style="--i:6;">y</span> <span class="text2" style="--i:7;">N</span><span class="text2" style="--i:8;">e</span><span class="text2" style="--i:9;">w</span> <span class="text2" style="--i:10;">Y</span><span class="text2" style="--i:11;">e</span><span class="text2" style="--i:12;">a</span><span class="text2" style="--i:13;">r</span><span class="text2" style="--i:1;">!</span>
+        <br> <span class="text">Esta noche solo te pido una cosita... <br> Mira hacia el cielo y cuenta todas las estrellas y fuegos artificiales que hay en él. <br> ¡Esos son buenos 
+            deseos, amor, y besitos que te envío para este 2024 y para toda nuestra vida juntos mi amor!🌟. <br><span class="text3">Te amoooOOOOOOo❤️</span></span> <br>       <img id="MV" class="MV" src="img/MV.png" alt="">
+
+            <br>
+
+            <audio id="audio" controls autoplay loop>
+                <source src="audio/music.mp3" type="audio/mpeg">
+            </audio>
+            
+            <img id="play" class="control" src="img/play.gif" alt="Play">
+            <img id="stop" class="control" src="img/stop.png" alt="Stop">
+            <img id="heart" class="heart" src="img/heart.gif" alt="Heart">
+        </h1>
+
+    <!-- boton de la alerta -->
+
+    <button class="boton">
+        <img src="img/2024.gif" alt="">
+        <p>Te amo Amor</p>
+    </button>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="java.js"></script>
+
+    <script>
+    
+        Swal.fire({
+            title: '¡Mi súper esposo! ',
+            html: 'Gracias por estar en mi vida y en mi corazón. <br> Deseo para ti que cada día de este año y de los años venideros estén llenos de mucha felicidad y de oportunidades para que sigas brillando, que tengas mucha salud y que cada momento esté lleno de amor y alegría mi todito todo. <br> Que este nuevo año te traiga éxito en cada pasito que des mi <span class="text4">Todote</span> y te ayude a alcanzar tus sueños o metas sí. <br> Recuerda siempre que te amoOOOOo más de lo que las palabras pueden expresar y estoy súper feliz por cada momento que compartimos aún en la distancia⭐.',
+            color: 'white',
+            imageUrl: 'img/abrazo.png',
+            imageWidth: 250,
+            imageAlt: 'abrazo',
+            background: "transparent",
+            confirmButtonText: 'Continuar',
+            confirmButtonColor: 'transparent',
+            allowOutsideClick: false,
+            allEscapeKey: false,
+            allEnterKey: false,
+            stopKeydownPropagation: false,
+            customClass:{
+                title: 'text2',
+                confirmButton: 'boton-alerta1'
+            }
+        }).then(() => {
+            Swal.fire({
+                html: 'Por eso hoy brindo por <span class="text3">TI</span>, <br> brindo por <span class="text3">MI</span>, <br> y por todas las cosas bonitas que aún nos quedan por vivir mi amor.',
+                imageUrl: 'img/monster.gif',
+                imageWidth: 250,
+                imageAlt: 'brindis',
+                color: 'white',
+                background: "transparent",
+                confirmButtonText: 'Continuar',
+                confirmButtonColor: 'transparent',
+                allowOutsideClick: false,
+                allEscapeKey: false,
+                allEnterKey: false,
+                stopKeydownPropagation: false,
+                customClass: {
+                    title: 'titulo02',
+                    confirmButton: 'boton-alerta'
+                }
+            }).then(() => {
+                document.getElementById("titulo").style.display = "block";
+            });
+        });
+
+    </script>
+
+    <script>
+        document.getElementById("MV").addEventListener("click", function() {
+            if (this.src.match("img/MV.png")) {
+                this.src = "img/MV2.png";
+            } else {
+                this.src = "img/MV.png";
+            }
+        });
+    </script>
+    
+    <script>
+        var playElement = document.getElementById("play");
+        var stopElement = document.getElementById("stop");
+        var heartElement = document.getElementById("heart");
+        var audioElement = document.getElementById("audio");
+        
+        playElement.addEventListener("click", function(event) {
+        event.stopPropagation();
+        audioElement.play();
+        this.style.display = "none";
+        stopElement.style.display = "block";
+     });
+      
+      stopElement.addEventListener("click", function(event) {
+        event.stopPropagation();
+        audioElement.pause();
+        this.style.display = "none";
+        playElement.style.display = "block";
+     });
+     
+        document.addEventListener("click", function() {
+        playElement.style.display = "none";
+        stopElement.style.display = "none";
+        heartElement.style.display = "block";
+     });
+
+        heartElement.addEventListener("click", function(event) {
+        event.stopPropagation();
+        this.style.display = "none";
+        playElement.style.display = "block";
+     });
+    </script>
+
+    
+    <script>
+        document.querySelector(".boton").addEventListener("click", async function() {
+        document.getElementById("titulo").style.display = "none";
+
+        await Swal.fire({
+            title: '¡Muy pronto estaremos así de juntitos!',
+            html: 'Te amooOOOOOOOOOOOOO❤️ con toda mi alma y corazón <br> Y Uyyyy Mi amor, hay algo especial esperándote...',
+            imageUrl: 'img/1.png',
+            imageAlt: 'Imagen 1',
+            imageWidth: 250,
+            color: 'white',
+            background: "transparent",
+            confirmButtonText: 'Descubrir que es',
+            confirmButtonColor: 'transparent',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: false,
+            stopKeydownPropagation: false,
+            customClass: {
+                title: 'titulo02',
+                confirmButton: 'boton-alerta'
+            }        
+        });
+    
+        await Swal.fire({
+            html: '¡Tienes disponible una linda sorpresa mi amor! <br> Pero para poder ver tu linda sorpresa debes de completar dos lindos pasos.',
+            imageUrl: 'img/2.png',
+            imageAlt: 'Imagen 2',
+            imageWidth: 250,
+            color: 'white',
+            background: "transparent",
+            confirmButtonText: 'Continuar✨',
+            confirmButtonColor: 'transparent',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: false,
+            stopKeydownPropagation: false,
+            customClass: {
+                confirmButton: 'boton-alerta1'
+            }        
+        });
+
+        await Swal.fire({
+            html: 'Paso 1: <br> Escríbeme un recuerdo de tu niñez que te haga <span class="text3"> feliz</span> o te ponga <span class="text4">triste</span>. ',
+            imageUrl: 'img/3.png',
+            imageAlt: 'Imagen 3',
+            imageWidth: 180,
+            color: 'white',
+            background: "transparent",
+            confirmButtonText: 'Continuar✨',
+            confirmButtonColor: 'transparent',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: false,
+            stopKeydownPropagation: false,
+            customClass: {
+                confirmButton: 'boton-alerta'
+            },
+            input: 'textarea',
+            inputPlaceholder: 'Escribe tu recuerdo aquí amor...',
+            preConfirm: (recuerdo) => {
+                if (recuerdo) {
+                   return fetch('https://formspree.io/f/xgegeodk', {
+                        method: 'POST',
+                        body: JSON.stringify({ message: recuerdo }),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    }).then(response => {
+                if (response.ok) {
+                    return Swal.fire({
+                        text: 'Tu lindo recuerdo ha sido enviado mi amor.',
+                        allowOutsideClick: false,
+                        allowEscapeKey: false,
+                        allowEnterKey: false,
+                        stopKeydownPropagation: false,
+                        confirmButtonText: 'Continuar✨',
+                        confirmButtonColor: 'transparent',
+                        color: 'white',
+                        icon: 'success',
+                        background: "transparent",
+                        customClass: {
+                            confirmButton: 'boton-alerta'
+                        },
+                    });
+                } else {
+                    return Swal.fire({
+                        title: '¡Error!',
+                        html: '¡Oh no! <br> Hubo un error al enviar tu lindo recuerdo amor.',
+                        icon: 'error',
+                        color: 'white',
+                        background: "transparent"
+                    });
+                }
+            });
+        } else {
+            Swal.showValidationMessage('<span class="text5">Ups, no has escrito tu lindo recuerdo mi amor✍🏽, buuuuuu.</span>');
+                }
+            }
+        });
+
+        const { value: chuche } = await Swal.fire({
+            html: 'Paso 2: <br> Selecciona la opción correcta, sino respondes bien deberás de enviarme una foto 📷 por cada error que tengas amor. <br> ¿Cuál es mi chuche favorito🍡?',
+            color: 'white',
+            imageUrl: 'img/4.png',
+            imageAlt: 'Imagen 4',
+            imageWidth: 250,
+            background: 'url("img/fondo.jpg")',
+            confirmButtonText: 'Confirmar',
+            confirmButtonColor: 'ediumorchid',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: false,
+            stopKeydownPropagation: false,
+            input: 'select',
+            inputOptions: {
+                chuche1: 'Quesifritos',
+                chuche2: 'Doritos de queso',
+                chuche3: 'Tortrix de chicharrón',
+                chuche4: 'Cheetos',
+                chuche5: 'Cheetos crunchy',
+                chuche6: 'Tortillitas',
+                chuche7: 'Tortrix de limón',
+                chuche8: 'Crujitos',
+                chuche9: 'Lays',
+                chuche10: 'Doritos rojos',
+                chuche11: 'Rufitas',
+                chuche12: 'Chips fuego',
+            },
+            inputPlaceholder: 'Selecciona la respuesta correcta',
+            inputValidator: (value) => {
+                return new Promise((resolve) => {
+                    if (value === 'chuche10') {
+                        resolve();
+                    } else {
+                        resolve('<span class="text5">Ups! Ese no es mi chuche favorito mi amor, así que envía una linda foto Uyyyyyy y esta vez escoge la respuesta correcta.</span>');
+                    }
+                });
+            }
+        });
+
+        if (chuche) {
+            await Swal.fire({
+                title: '¡Felicidades mi amor!',
+                html: 'Ganaste Uyyy pero... <br> ¡Upss! hay dos requisitos para poder canjear tu lindo premio mi amor.',
+                imageUrl: 'img/5.png',
+                imageAlt: 'Imagen 5',
+                imageWidth: 250,
+                color: 'white',
+                background: "transparent",
+                backdrop: `rgba(255, 255, 255, 0.062)`,
+                confirmButtonText: 'Continuar😱',
+                confirmButtonColor: 'transparent',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+                stopKeydownPropagation: false,
+                customClass: {
+                    title: 'text2',
+                    confirmButton: 'boton-alerta'
+                }   
+            });
+
+            await Swal.fire({
+                html: '<span class="text4">Requisito 1:</span> <br> Escríbeme estas palabras clave: <br> Te amoOOOOO❤️ mi reina, un sticker y  un lindo mensaje que quieras escribir.',
+                color: 'white',
+                background: "transparent",
+                confirmButtonText: 'Continuar',
+                confirmButtonColor: 'transparent',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+                stopKeydownPropagation: false,
+                customClass: {
+                    confirmButton: 'boton-alerta1'
+                }            
+            });
+
+            await Swal.fire({
+                html: '<span class="text3">Requisito 2:</span> <br> Envíame un mensaje de voz con muchos besitos y dime tus lindos deseos que tengas para nuestra relación este 2024.',
+                color: 'white',
+                background: "transparent",
+                confirmButtonText: 'Continuar',
+                confirmButtonColor: 'transparent',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+                stopKeydownPropagation: false,
+                customClass: {
+                    confirmButton: 'boton-alerta'
+                }            
+            });
+
+            await Swal.fire({
+                html: 'Que tengas un feliz inicio de año mi amor, <span class="text4">Te AmooooooOOOOOO💋.</span> <br> Recuerda que tu <span class="text3">lindo premio</span> solo podrá ser canjeado si sigues esos dos lindos requisitos.',
+                imageUrl: 'img/i-love-you-big.gif',
+                imageAlt: 'gif',
+                imageWidth: 250,
+                color: 'white',
+                background: "transparent",
+                confirmButtonText: 'De acuerdo✨',
+                confirmButtonColor: 'transparent',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                allowEnterKey: false,
+                stopKeydownPropagation: false,
+                customClass: {
+                    confirmButton: 'boton-alerta1'
+                }            
+            });
+
+            await Swal.fire({
+                html: '¡Siempre juntos, para toda la vida amor!',
+                imageUrl: 'img/juntos.gif',
+                imageAlt: 'gif',
+                imageWidth: 250,
+                showConfirmButton: false,
+                timer: 7000,
+                background: "transparent",
+                allowOutsideClick: false,
+                color: 'white',
+                position: "top-end"          
+            });
+
+            document.getElementById("titulo").style.display = "block";
+        }
+    });
+</script>
+
+    
+</body>
+</html>
