@@ -107,11 +107,17 @@ body{
     width: 50px;
 }
 
-
 #stop{
     position: relative;
-    left: 95%;
+    left: 85%;
     width: 35px;
+    cursor: pointer;
+}
+
+#play{
+    position: relative;
+    left: 85%;
+    width: 40px;
     cursor: pointer;
     animation: girar 5s linear infinite;
 }
@@ -121,11 +127,9 @@ body{
     100% { transform: rotate(360deg); }
 }
 
-#play{
-    position: relative;
-    left: 85%;
-    width: 50px;
-    cursor: pointer;
+.music {
+    margin-top: -150px;
+    margin-left: 130px;
 }
 
 audio{
@@ -172,7 +176,7 @@ audio{
 
 @media screen and (max-width: 770px){
     .titulo{
-        top: 45%;
+        top: 50%;
         line-height: 25px;
     }
     .text2{

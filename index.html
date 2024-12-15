@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="shortcut icon" href="img/6.png" type="image/icon">
+    <link rel="icon" href="img/6.png" type="icon">
     <link rel="stylesheet" href="style.css">
     <title>For You🎆</title>
 </head>
@@ -11,20 +11,24 @@
 
     <canvas id="canvas"></canvas>
 
+    <div class="container">
         <h1 class="titulo" id="titulo"><span class="text2" style="--i:1;">¡</span><span class="text2" style="--i:2;">H</span><span class="text2" style="--i:3;">a</span><span class="text2" style="--i:4;">p</span><span class="text2" style="--i:5;">p</span><span class="text2" style="--i:6;">y</span> <span class="text2" style="--i:7;">N</span><span class="text2" style="--i:8;">e</span><span class="text2" style="--i:9;">w</span> <span class="text2" style="--i:10;">Y</span><span class="text2" style="--i:11;">e</span><span class="text2" style="--i:12;">a</span><span class="text2" style="--i:13;">r</span><span class="text2" style="--i:1;">!</span>
         <br> <span class="text">Esta noche solo te pido una cosita... <br> Mira hacia el cielo y cuenta todas las estrellas y fuegos artificiales que hay en él. <br> ¡Esos son buenos 
-            deseos, amor, y besitos que te envío para este 2024 y para toda nuestra vida juntos mi amor!🌟. <br><span class="text3">Te amoooOOOOOOo❤️</span></span> <br>       <img id="MV" class="MV" src="img/MV.png" alt="">
-
+            deseos, amor, y besitos que te envío para este 2024 y para toda nuestra vida juntos mi amor!🌟. <br><span class="text3">Te amoooOOOOOOo❤️</span></span> <br>       
+            <img id="MV" class="MV" src="img/MV.png" alt="mv"> <p class="clickme">click me ⭡</p>
             <br>
-
+            
             <audio id="audio" controls autoplay loop>
                 <source src="audio/music.mp3" type="audio/mpeg">
             </audio>
             
-            <img id="play" class="control" src="img/play.gif" alt="Play">
-            <img id="stop" class="control" src="img/stop.png" alt="Stop">
-            <img id="heart" class="heart" src="img/heart.gif" alt="Heart">
+            <div class="music">
+                <img id="play" class="control" src="img/play.png" alt="Play">
+                <img id="stop" class="control" src="img/heart.gif" alt="Stop" style="display:none;">
+            </div>
+            
         </h1>
+    </div>
 
     <!-- boton de la alerta -->
 
@@ -94,34 +98,26 @@
     <script>
         var playElement = document.getElementById("play");
         var stopElement = document.getElementById("stop");
-        var heartElement = document.getElementById("heart");
         var audioElement = document.getElementById("audio");
         
         playElement.addEventListener("click", function(event) {
-        event.stopPropagation();
-        audioElement.play();
-        this.style.display = "none";
-        stopElement.style.display = "block";
-     });
-      
-      stopElement.addEventListener("click", function(event) {
-        event.stopPropagation();
-        audioElement.pause();
-        this.style.display = "none";
-        playElement.style.display = "block";
-     });
-     
+            event.stopPropagation();
+            audioElement.play();
+            this.style.display = "none";
+            stopElement.style.display = "block";
+        });
+        
+        stopElement.addEventListener("click", function(event) {
+            event.stopPropagation();
+            audioElement.pause();
+            this.style.display = "none";
+            playElement.style.display = "block";
+        });
+        
         document.addEventListener("click", function() {
-        playElement.style.display = "none";
-        stopElement.style.display = "none";
-        heartElement.style.display = "block";
-     });
-
-        heartElement.addEventListener("click", function(event) {
-        event.stopPropagation();
-        this.style.display = "none";
-        playElement.style.display = "block";
-     });
+            playElement.style.display = "block";
+            stopElement.style.display = "none";
+        });
     </script>
 
     
@@ -352,8 +348,7 @@
             document.getElementById("titulo").style.display = "block";
         }
     });
-</script>
+    </script>
 
-    
 </body>
 </html>
